@@ -11,6 +11,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+		<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js"></script>
 	</head>
 	<body class="is-preload">
 
@@ -74,12 +76,85 @@
 									the system, where as the pump curve can be obtained from the manufacturer. The plot can be utilized to
 									visualize different pump arrangements and operating conditions, such as but not limited to parallel
 									pumps and the inclusion of a throttling valve.</p>
+									
+									<!-- Headloss eqn -->
+									<p>
+										The system curve can be summarized as:
+										\[H_{system} = (z_2 - z_1) + {{V^2} \over 2g}(\sum {{fL} \over D} + \sum K) \]
+									</p><br />
 
-									<p>hese gates pumps water from the intake to the treatment plant at an approximate distance of twelve-
-										hundred metres (1.2 km) with an elevation increase between the reservoir and treatment surface being
-										twenty-two metres (22 m). An inlay of the piping route can be seen on top of the satellite image
-										provided by Google Earth.</p><br />
-
+									<p>The first term of the equation describes the change of elevation of the water surface of the river and the reservoir,
+									the second term describes the frictional loses in the pipe and fittings of the system.</p>
+									<p>The installation of each pump must also be illustrated into the existing platforms along with any required modifications.
+									These drawings are purely conceptual, and not to be interpreted as detailed drawings.</p>
+									
+									<h2>Pump and System Plots</h2>
+									<p>In order to develop the system curve, the elevation change, length of piping, and the types and number of fittings/valves must also be specified.
+										Since PDAM does not have the piping layout and specific drawings of the system, an approximation of pipe length and fitting information can be approximated.
+										The existing operating pumps do have an operating head that can be used as a reference. The table below summarizes the parameters used in this study.
+									</p>
+									<table>
+										<thead>
+											<tr>
+												<th>Parameter</th>
+												<th>Unit</th>
+												<th>Measure</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Plant elevation</td>
+												<td>\[z_2 \]</td>
+												<td>\[27 m \]</td>
+											</tr>
+											<tr>
+												<td>Intake elevation</td>
+												<td>\[z_1 \]</td>
+												<td>\[5 m \]</td>
+											</tr>
+											<tr>
+												<td>Pipe diameter</td>
+												<td>\[D \]</td>
+												<td>\[400 mm \]</td>
+											</tr>
+											<tr>
+												<td>Pipe length</td>
+												<td>\[L \]</td>
+												<td>\[1210 m \]</td>
+											</tr>
+											<tr>
+												<td>Pipe roughness</td>
+												<td>\[\epsilon \]</td>
+												<td>\[0.061 mm \]</td>
+											</tr>
+											<tr>
+												<td>Fitting loss coefficient</td>
+												<td>\[K_{gate} \]</td>
+												<td>\[0.15 \]</td>
+											</tr>
+											<tr>
+												<td></td>
+												<td>\[K_{check} \]</td>
+												<td>\[2 \]</td>
+											</tr>
+											<tr>
+												<td></td>
+												<td>\[K_{90} \]</td>
+												<td>\[0.4 \]</td>
+											</tr>
+											<tr>
+												<td></td>
+												<td>\[K_{135} \]</td>
+												<td>\[1.5 \]</td>
+											</tr>
+											<tr>
+												<td>Kinematic viscosity</td>
+												<td>\[\nu \]</td>
+												<td>\[1.005E^{-6} {{m^2} \over s} \]</td>
+											</tr>
+										</tbody>
+									</table>
+									
 									<header>
 										<h2>Heading with a Subtitle</h2>
 										<p>Lorem ipsum dolor sit amet nullam id egestas urna aliquam</p>
