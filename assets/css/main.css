@@ -29,6 +29,11 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;}
 
+.MathJax_Display, .MJXc-display, .MathJax_SVG_Display {
+	overflow-x: auto;
+	overflow-y: hidden;
+}	
+
 body {
 	line-height: 1;
 }
