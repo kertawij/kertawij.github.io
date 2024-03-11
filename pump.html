@@ -13,17 +13,10 @@
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 		<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js"></script>
-		<script type="text/x-mathjax-config">
-			MathJax.Hub.Config({
-			  "HTML-CSS": {linebreaks: { automatic: true }}
-			})
-			.MathJax_Display, .MJXc-display, .MathJax_SVG_Display {
-				overflow-x: auto;
-				overflow-y: hidden;
-			}
-			
-		  </script>
-		  
+		<style>.MathJax_Display, .MJXc-display, .MathJax_SVG_Display {
+			overflow-x: auto;
+			overflow-y: hidden;
+		}</style>
 	</head>
 	<body class="is-preload">
 
@@ -91,7 +84,7 @@
 									<!-- Headloss eqn -->
 									<p>
 										The system curve can be summarized as:
-										\[H_{system} = (z_2 - z_1) + {{V^2} \over 2g}(\sum {{fL} \over D} + \sum K) \]
+										<span class="MathJax_Display">\[H_{system} = (z_2 - z_1) + {{V^2} \over 2g}(\sum {{fL} \over D} + \sum K) \]</span>
 									</p>
 
 									<p>The first term of the equation describes the change of elevation of the water surface of the river and the reservoir,
