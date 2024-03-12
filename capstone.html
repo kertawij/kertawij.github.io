@@ -198,7 +198,30 @@
 											<div class="col-6"><span class="image fit"><img src="images/capstone/capstone_operationalZ.jpg" alt="" /></span></div>
 										</div>
 									</div>
-									<h3>Simulation</h3>
+									<h2>Bracket Simulation</h2>
+									<p> The analysis of the design chassis utilizes the loads obtained from the load analysis. The most critical loading scenarios involve the bracket bearing the individual forces presented by the thrust of the nozzles. SolidWorks Static simulations
+										were utilized to obtain a Von-Mises stress map to indicate the highest stress present in each bracket. Within computational analysis the correct materials, connections between parts, restraints (immovable points to set a boundary condition)
+										and loading needs to be specified. SolidWorks static simulations offer a diverse repertoire of materials complete with property sheets, which conveniently includes AISI 316 grade stainless steel
+										
+									</p>
+									<h3>Simulation Connections and Restraints</h3>
+									<p><span class="image right"><img src="images/capstone/capstone_weld_connection.jpg" alt="" /></span>For the single unit analysis, the component interactions (intersection, adhesion) were limited to a bonding contact, emulating a component or model with constituent bodies that had been welded or adhered together. In order to prevent interference
+										(merging) of the solid materials, a global contact interaction was established. Although a global interaction was set, the part consists of two to three metal components that needs to be welded together. For this an edge weld connection
+										was applied to the relevant corners. This feature would then be used as a reference for the recommended weld diameter at the end of the simulation. The edge-weld connections are located in between contacting edges of any stainless-steel
+										parts.
+									</p>
+									<p><span class="image left"><img src="images/capstone/capstone_chassi_lagoon.jpg" alt="" /></span>Fixtures are required to set a boundary condition in a stress simulation. Fixing the proper geometry on the part analysed is a crucial part of the analysis. The selection of the restraints within the simulation shall model accurately on how the part is restrained in its real-life application.
+										the image on the left shows how the chassis will interact with the lagoon floor and walls while it is in its operating condition. The chassis will not be bolted down unto the lagoon (neither the floor, nor the walls). The sheer weight of the manifold and chassis will provide the downforce 
+										required to anchor the array. With the addition of the thrust generated from the nozzle that will push up the chassis skids against the wall, the manifold will be secured throughout operation.
+									</p>
+									<p><span class="image right"><img src="images/capstone/capstone_chassi_fixtures.jpg" alt="" /></span> The image on the right shows the chosen fixtures that the team believed to be the best way to represent the real-life restraints. A virtual wall will be modeled for the wall and floor of the lagoon, it will only allow compressive action of the part against those walls.
+										An edge at the corner of the skid plate will be a fixed geometry, not able to be displaced. These restraints are not a 100% accurate, although it is the best representation that allows for a single stress unit analysis. A more accurate restraint
+										representation could be modeled, but the manifold system would need to be included in the analysis as well. Although the numerous complicated connections and computational time might not be worth the results.
+									</p>
+
+									<h3>Bracket Loading</h3>
+									<p><span class="image fit"><img src="images/capstone/capstone_loading.jpg" alt="" /></span>The external forces are applied on the parts as a “bearing load”, as it would allow for a sinusoidal distribution of the load from the manifold onto the support. Split lines were made in order to allow selections of the relevant faces that would be affected by the forces,
+										as illustrated.</p>
 									<hr />
 									<header>
 										<h2>Heading with a Subtitle</h2>
