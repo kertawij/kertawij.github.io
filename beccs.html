@@ -11,6 +11,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+		<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js"></script>
 	</head>
 	<body class="is-preload">
 
@@ -44,21 +46,42 @@
 								</header>
 
 								<!-- Text stuff -->
-									<h2>Background</h2>
-									<p>The capstone project was presented as a course requirement by The University of Victoria Mechanical Engineering Department.
-									This project was done by the engineering team that consisted of myself, Jersey Kertawidjaja, and three other mechanical
-									engineering students: <b>Duncan Wallace</b>, <b>Nipuna Fernando</b>, and <b>Brandon Nolan</b>. Without my team members and the teaching assistants,
-									<b>Adam Johnson</b> and <b>Shima Akar</b>
-									this project would be much too overwhelming.<p>
-									
-									<p>Global Solution Universe Inc. (GSU) is recommending their client (which will be referred to as the
-									“treatment plant” to maintain confidentiality) to implement a supplemental aeration system into their
-									existing aeration basin/lagoon, in addition to their already existing surface aerators. The injector nozzle
-									proposed will inject aerated oxygen into the bottom of the lagoon. GSU would be sourcing a venturi
-									nozzle and injector nozzles from Mazzei Injector Company LLC. (MICL), a company that design and build
-									the injectors. Whilst the piping and manifold specifications would be sourced from Engineered Pipe
-									Group (EPG).</p>
-									<span class="image fit"><img src="images/capstone/capstone_background.jpeg" alt="" /></span>	
+									<p>This project was presented as a requirement for the course MECH 450C: Energy Conversion and Storage, taught by Professor <b>Andrew Rowe</b>.
+										This project was done by myself, Jersey Kertawidjaja, and my teamate <b>Pouria Fyezi Oskouei</b>.
+									</p>
+									<h2>Background and Objectives</h2>
+									<p>One of the biggest challenges in the energy industry since industrialization is how to overcome greenhouse
+										gas (GHG) emissions, especially in the past three decades. In general, there are three ways to alleviate this
+										problem: 1- Utilizing more efficient energy systems 2- Using renewable energy sources 3- Finding a way to
+										lower the ever-growing amount of GHGs already being emitted in the atmosphere over a long time.
+									</p>
+									<p>
+										The latter method will be the focus of this project. Since carbon dioxide (CO2) presents itself as a major
+										GHG causing climate change, it is the substance in particular that is aimed to be reduced. To have a better
+										understanding as to why this is an issue to be addressed, the pre-industrial CO2 amount in the atmosphere
+										was 280ppm (part per million) or less. However, this has risen to more than 419ppm. This increase
+										indicates that the amount of CO2 released in the past two centuries is more than 1T tons (1012 Tons=1015
+										Kg). The increase causing climate change, which is one of the determinant reasons resulting in 1.2 °C
+										increase in average global temperature relative to the late-19th century. It is estimated, with the same
+										slope of GHG emissions, at the end of this century the mole fraction of CO2 in the atmosphere will reach
+										about 800ppm which will result in more than 4.5 °C temperature rise globally.
+									</p>
+									<p>
+										One of the proposed and currently used method to remove carbon from the atmosphere is called Direct
+										Air Capture (DAC), which involves the capture of CO2 directly from ambient air. It uses a combination of
+										chemical processes and engineered systems to selectively extract CO2 molecules from the atmosphere,
+										even when it is present in trace amounts. DAC facilities typically consist of large fans or other air intake
+										mechanisms that draw in air, which is then processed through a series of chemical sorbents or absorbents
+										designed to capture the CO2. Once the CO2 is captured, it can be separated from the sorbent, compressed,
+										and stored for subsequent use or long-term sequestration.
+									</p>
+									<p>
+										The captured CO2 can be used for a variety of purposes, including carbon-neutral fuel production,
+										enhanced oil recovery, or for direct underground storage in geological formations. DAC is considered a
+										promising technology for addressing the challenge of reducing atmospheric CO2 concentrations and
+										mitigating climate change. However, it is still relatively expensive and energy-intensive compared to some
+										other carbon removal methods.
+									</p>	
 									<!-- <p><b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
 									This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
 									This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>.
@@ -66,17 +89,74 @@
 									
 									<hr />
 
-									<h2>Objectives</h2>
-									<p>The primary objective of this project is to design a support chassis for the injector manifold, enabling
-									safe and efficient installation and inspection while the treatment plant continues its operations. The
-									project will address various loading conditions, including operation, installation, and inspection, to
-									ensure the structural integrity of the injector system.
-									The successful implementation of the supplemental aeration system and the ability to inspect and
-									maintain the injectors over at least five years will have profound implications for the client. Firstly, it will
-									enhance the overall treatment efficiency and effectiveness of the plant, leading to improved water
-									quality and environmental preservation. Secondly, the ability to conduct inspections without
-									interrupting operations will significantly reduce downtime and operational costs, ultimately benefiting
-									the client's financial sustainability.</p>
+									<h2>Methods</h2>
+									<p>The purpose of this project is to conduct an exergetic analysis of a DAC system coupled with a power cycle
+										(that runs on natural gas) and see how DAC affects the efficiency of the system. This configuration of biogas
+										power cycle and carbon capture is called Bioenergy with carbon capture and storage (BECCS) and is quite
+										an alluring solution to the climate issue.
+									</p>
+									<p>
+										The exergy destruction in the system can be pointed out in the process and so does respective solutions
+										to alleviate them. Moreover, as opposed to the DAC plants being currently run, we aim to find a better
+										input energy source (other than natural gas, which in its own utilization produces CO2) and evaluate their
+										corresponding feasibility.
+									</p>
+									<p>
+										Throughout the upcoming sections of the report, exergy analysis of a power cycle and CCS will be
+										conducted separately. Total exergy destruction will be calculated from the cumulative amount of each
+										device of each system, done to allocate the locations of large exergy destruction. The exhaust of the power
+										cycle system would then be coupled with the inlet air of the CCS. The affects of change in concentrations
+										can be noticed in CCS fuel requirements, and so does how the CCS affects the efficiency of the power cycle,
+										as it requires more fuel input. 
+									</p>
+
+									<h2>Result of Exergetic Analysis</h2>
+
+									<p>Exergetic calculations need to be done on the power cycle system as well as the carbon capture
+										component. Exergy of the states present in the components must be defined. Below are the expressions
+										that will be used for defining the exergetic values:
+									</p>
+
+									<table>
+										<thead>
+											<tr>
+												<th>definition</th>
+												<th>expression</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Energy Balance</td>
+												<td>\[{dE \over dt}=Q-W+\sum{ \dot {m_i}} {h_i}^* - \sum{ \dot {m_e}} {h_e}^* \]</td>
+											</tr>
+											<tr>
+												<td>Exergetic Balance</td>
+												<td>\[{dE_x \over dt}=\sum{ {\dot E_{xQ}}} - \dot W + \sum{ {\dot m e_{xf}}} - \dot \Pi_D\]</td>
+											</tr>
+											<tr>
+												<td>Flow Exergy</td>
+												<td>\[e_{xf} \equiv (h-h_0) - T_0(s-s_0)+ {{V^2}\over2} + gz +e_{ch}  \]</td>
+											</tr>
+											<tr>
+												<td>Chemical Exergy</td>
+												<td>\[\bar e_{ch} = \sum_{\alpha}^n(\bar e_{ch} + \bar R T_0 ln(x_\alpha))x_\alpha \]</td>
+											</tr>
+											<tr>
+												<td>System Efficiency</td>
+												<td>\[\eta_{system} = {E_P \over E_F} = 1 - {E_D \over E_F} \]</td>
+											</tr>
+										</tbody>
+									</table>
+
+									<h3>natural gas power cycle analysis</h3>
+
+									<p>In order to compare the system effeciency of a typical natural gas (methane) power cycle, equipt with CCS,
+										with a biogas (methane from biological sources) power cycle system absent CCS, the schematic of the
+										process of power generation is needed.
+									</p>
+									
+									
+									<span class="image fit"><img src="images/exergy/exergy_thumbnail.png" alt="" /></span>
 
 									<h3>Specifications</h3>
 									<div class="table-wrapper">
