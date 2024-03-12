@@ -13,6 +13,10 @@
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 		<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js"></script>
+		<style>.MathJax_Display, .MJXc-display, .MathJax_SVG_Display {
+			overflow-x: auto;
+			overflow-y: hidden;
+		}</style>
 	</head>
 	<body class="is-preload">
 
@@ -37,7 +41,7 @@
 				</nav>
 
 				<!-- Main -->
-					<div id="main">
+					<div id="main" overflow-x:scroll>
 
 						<!-- Post -->
 							<section class="post">
@@ -124,26 +128,26 @@
 												<th>expression</th>
 											</tr>
 										</thead>
-										<tbody>
+										<tbody class="MathJax_Display">
 											<tr>
 												<td>Energy Balance</td>
 												<td class="MathJax_Display">\[{dE \over dt}=Q-W+\sum{ \dot {m_i}} {h_i}^* - \sum{ \dot {m_e}} {h_e}^* \]</td>
 											</tr>
 											<tr>
 												<td>Exergetic Balance</td>
-												<td>\[{dE_x \over dt}=\sum{ {\dot E_{xQ}}} - \dot W + \sum{ {\dot m e_{xf}}} - \dot \Pi_D\]</td>
+												<td class="MathJax_Display">\[{dE_x \over dt}=\sum{ {\dot E_{xQ}}} - \dot W + \sum{ {\dot m e_{xf}}} - \dot \Pi_D\]</td>
 											</tr>
 											<tr>
 												<td>Flow Exergy</td>
-												<td>\[e_{xf} \equiv (h-h_0) - T_0(s-s_0)+ {{V^2}\over2} + gz +e_{ch}  \]</td>
+												<td class="MathJax_Display">\[e_{xf} \equiv (h-h_0) - T_0(s-s_0)+ {{V^2}\over2} + gz +e_{ch}  \]</td>
 											</tr>
 											<tr>
 												<td>Chemical Exergy</td>
-												<td>\[\bar e_{ch} = \sum_{\alpha}^n(\bar e_{ch} + \bar R T_0 ln(x_\alpha))x_\alpha \]</td>
+												<td class="MathJax_Display">\[\bar e_{ch} = \sum_{\alpha}^n(\bar e_{ch} + \bar R T_0 ln(x_\alpha))x_\alpha \]</td>
 											</tr>
 											<tr>
 												<td>System Efficiency</td>
-												<td>\[\eta_{system} = {E_P \over E_F} = 1 - {E_D \over E_F} \]</td>
+												<td class="MathJax_Display">\[\eta_{system} = {E_P \over E_F} = 1 - {E_D \over E_F} \]</td>
 											</tr>
 										</tbody>
 									</table>
