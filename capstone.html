@@ -138,11 +138,67 @@
 									gain valuable insights into specific needs and preferences of the end-user. By incorporating the client's
 									input, the final design not only met technical specifications but also aligned perfectly with the client's
 									vision and requirements.</p>
+									
+									<p><span class="image left"><img src="images/capstone/capstone_retainer.jpg" alt="" /></span>Additional to the chassis the team wanted to incorporate a method of retaining the downpipe of the manifold from tipping during extraction.
+									The team investigated many different solutions such as custom brackets or chains but ended up with the design pictured below utilizing rope
+									and wraparound cleats.</p></br />
 
-									<h3>Load Analysis</h3>
-									<h4>Heading Level 4</h4>
-									<h5>Heading Level 5</h5>
-									<h6>Heading Level 6</h6>
+									<p>One of the first steps taken in analysing the chassis design was an estimation of the loads and reactions experienced by the chassis supports. This was achieved by first examining
+									the forces the manifold itself would be subject to under a determined set of conditions. </p>
+
+									<h2>Load Analysis</h2>
+									<p>One of the first steps taken in analysing the chassis design was an estimation of the loads and reactions experienced by the chassis supports. This was achieved by first examining the forces the manifold itself would be subject
+									 to under a determined set of conditions. </p>
+									<h3>Identification of Loads</h3>
+									<div class="row">
+										<div class="col-6 col-12-small">
+
+											<h4>Dryweight</h4>
+											<ul>
+												<p>The empty manifold is supported by the chassis which is in contact with the ground. The ensemble is un-immersed. The only body force experienced is gravity.</p>
+											</ul>
+
+											<h4>Static</h4>
+											<ul class="alt">
+												<p>The manifold and chassis are seated at the bottom of a lagoon and immersed in a prescribed depth of wastewater, the manifold is not operational and thus
+												the manifold internal control volume also hosts still wastewater in equilibrium with the free surface.</p>
+											</ul>
+
+										</div>
+										<div class="col-6 col-12-small">
+
+											<h4>Operational</h4>
+											<ul>
+												<p>As with the prior condition, the manifold and chassis are seated at the bottom of the lagoon and immersed in a prescribed depth of wastewater, however the
+												manifold is in an operational state. The internal control volume of the manifold hosts aerated wastewater however and the manifold is subject to thrust loading.</p>
+											</ul>
+
+											<h4>Lifting</h4>
+											<ul class="alt">
+												<p>The un-immersed and empty manifold and chassis see no planar support as they are lifted by hoist-points located on the chassis.</p>
+											</ul>
+
+										</div>
+									</div>
+									<h3>Segmenting the Manifold</h3>
+									<p><span class="image right"><img src="images/capstone/capstone_segmented.jpg" alt="" /></span>As the manifold is a large assembly with complex geometry the approach for load analysis would be simplified consisted of
+										breaking the manifold up into smaller segments and proceeding in a piece-wise manner. After which, the loading on the support chassis via the connected pieces could be conducted. The relevant forces acting on each manifold
+										segment were gravity, bouyancy, and the thrust presented by the injectors. The physical properties for each segment were obtained using SolidWorks and consisted of finding volumes, masses, spans, and centroids for both the
+										external (shell) and internal (water and/or air) segment regions. These properties were then aggregated in a spreadsheet and used to calculate the net forces acting on each segment. The calculated segment
+										forces were then mapped out along the span of the manifold (see image below of the partial spreadsheet), from this shear-bending moment diagrams could be made and the reactions at each of the supports could be found
+										(see Free Body Diagrams). This was done for all load cases except Lifting, as it represents a more complex case and requires prior knowledge of the chassis mass and geometry.
+									</p>
+					
+									<span class="image fit"><img src="images/capstone/capstone_spread.jpg" alt="" /></span>
+									<div class="box alt">
+										<div class="row gtr-50 gtr-uniform">
+											<div class="col-6"><span class="image fit"><img src="images/capstone/capstone_dryY.jpg" alt="" /></span></div>
+											<div class="col-6"><span class="image fit"><img src="images/capstone/capstone_staticY.jpg" alt="" /></span></div>
+											<div class="col-6"><span class="image fit"><img src="images/capstone/capstone_operationalY.jpg" alt="" /></span></div>
+											<div class="col-6"><span class="image fit"><img src="images/capstone/capstone_operationalZ.jpg" alt="" /></span></div>
+										</div>
+									</div>
+									<h3>Simulation</h3>
 									<hr />
 									<header>
 										<h2>Heading with a Subtitle</h2>
@@ -167,7 +223,7 @@
 									<div class="row">
 										<div class="col-6 col-12-small">
 
-											<h3>Unordered</h3>
+											<h3>Dryweight</h3>
 											<ul>
 												<li>Dolor pulvinar etiam.</li>
 												<li>Sagittis lorem eleifend.</li>
@@ -175,7 +231,7 @@
 												<li>Dolor pulvinar etiam.</li>
 											</ul>
 
-											<h3>Alternate</h3>
+											<h3>Static</h3>
 											<ul class="alt">
 												<li>Dolor pulvinar etiam etiam.</li>
 												<li>Sagittis adipiscing eleifend.</li>
