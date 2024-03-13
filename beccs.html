@@ -121,8 +121,7 @@
 										that will be used for defining the exergetic values:
 									</p>
 									
-									<h4>Energy Balance</h4>
-									<p class="MathJax_Display">\[{dE \over dt}=Q-W+\sum{ \dot {m_i}} {h_i}^* - \sum{ \dot {m_e}} {h_e}^* \]</p>
+
 									<h4>Energy Balance</h4>
 									<p class="MathJax_Display">\[{dE \over dt}=Q-W+\sum{ \dot {m_i}} {h_i}^* - \sum{ \dot {m_e}} {h_e}^* \]</p>
 									<h4>Exergetic Balance</h4>
@@ -191,13 +190,62 @@
 									</div>
 									<hr />
 
-									<h3>Carbon Capture System</h3>
+									<h2>Carbon Capture System</h2>
+
+									<p>According to Carbon Engineering, the goal set for the outflow of compressed CO2 is nearly 1 Mt-
+										CO2/year, which is equivalent to 114.155 t-CO2/hr. To reach this value there are inflows and outflows
+										which potentially have their exergetic values, which are obtained from the mentioned source. We
+										evaluated two cases:</p>
+									<ol>
+										<li>Assuming the inflow of the CCS is not power plants outflow (CCS unit not close to the power plant
+											unit)</li>
+										<li>Assuming the inflow of the CCS is from the upstream power plant</li>
+									</ol>
+									
+									<h3>General Ideal Case</h3>
+
+									<div class="table-wrapper">
+										<table>
+											<thead>
+												<tr>
+													<th>Atmospheric Air Flow rate</th>
+													<th>powerplant exhaust flow rate</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>251,000 t-Air/hr</td>
+													<td>114.7 t-PPE/hr</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+
+									<p>At the first glance, the amount of NG might seem a bit trivial, however considering the mole fraction of CO2
+										it will be shown that this amount is comparable to the atmospheric inflow.
+									</p>
+									<span class="image fit"><img src="images/exergy/exergy_ccs_ideal_seperation.png" alt="" /></span>
+
+									<p>Separation work is determined as follows (assuming all CO2 gets absorbed):</p>
+									
+									<p class="MathJax_Display">\[{\Delta S_{mix} \over 1t CO_2}=-\bar R T_0 ln X_{CO_2} \]</p>
+
+									<p>Accounting for two inflows with different mole fractions, the total mixing entropy will be 2.242 MJ/K for
+										1𝑡 𝑜𝑓 𝐶𝑂2. With that the amount of work for separating can be determined as:
+									</p>
+
+									<p class="MathJax_Display">\[{\dot W}=\dot n_{CO_2} T_0 \Delta S_{mix} \]</p>
+
+									<p>Therefore, the separation work in an ideal condition (no entropy generation and ideal mixture assumption)
+										will be 20.412 MW. However, we know this is not possible to achieve therefore we must account for the irreversibilities occurring into the system.
+									</p>
+
 									<p>To make the modeling process easier to perceive, the CCS is broken down into two parts which are absorption and desorption. In this part
 										absorption is to be evaluated to realize how much we have to pay for fighting against exergy destruction (entropy generation or irreversibilities).
 									</p>
-									<p>The beginning component of this subsystem is Contractor. In this component, air gets drawn into the system from the surrounding and gets in contact
-										with sorbent material which are coated with KOH which is used to make CO2 adhere to itself. A simplified model of contractor can be shown as below:
-									</p>
+									<h3>Ideal Case for Upstream Power plant case</h3>
+
+
 
 
 					</div>
