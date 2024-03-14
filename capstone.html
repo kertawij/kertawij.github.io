@@ -69,15 +69,7 @@
 
 									<h2>Objectives</h2>
 									<p>The primary objective of this project is to design a support chassis for the injector manifold, enabling
-									safe and efficient installation and inspection while the treatment plant continues its operations. The
-									project will address various loading conditions, including operation, installation, and inspection, to
-									ensure the structural integrity of the injector system.
-									The successful implementation of the supplemental aeration system and the ability to inspect and
-									maintain the injectors over at least five years will have profound implications for the client. Firstly, it will
-									enhance the overall treatment efficiency and effectiveness of the plant, leading to improved water
-									quality and environmental preservation. Secondly, the ability to conduct inspections without
-									interrupting operations will significantly reduce downtime and operational costs, ultimately benefiting
-									the client's financial sustainability.</p>
+									safe and efficient installation and inspection while the treatment plant continues its operations.</p>
 
 									<h3>Specifications</h3>
 									<div class="table-wrapper">
@@ -136,258 +128,108 @@
 										to talk with Engineering Pipe Group (EPG), the people responsible for finalizing the design of the manifold, and finialized the 3D model of the manifold using SolidWorks.
 									</p>
 									<h3>Initial Modelling of Support Brackets</h3>
-									<p>Although the team modeled the final design in collaborative session. I did some preliminary design for the support chassis, based on one of the concepts generated in a brainstorming session.</p>
+									<p><span class="image left"><img src="images/capstone/chassis design 1.png" alt="" /></span>Although the team modeled the final design in collaborative session. <b>I did some preliminary design for the support chassis, based on one of the concepts generated in a brainstorming session</b>.
+										Since it was the first iteration, it looked a bit simple. But it provided a good foundation, especially a good stepping stone when the team was dealing with "connections" in the  static simulations.
+										<br /><br />
+										<span class="image right"><img src="images/capstone/support2iso.png" alt="" /></span>The challenge was trying to simulate the bracket with as close to similarity to how it would be physically. Hence the design of using welded connections. As can be seen in the first iteration, the
+										design utilized water-jet cut materials welded to metal tubing of the same material. The issue I came across was that SolidWorks did not have a sophisticated weld connection feature, and it did not
+										like the weld connection that was made in the initial designs.<b> Hence the final design only composed of a single cut part out from a sheet, of which then be welded on to the skid (cut and formed),
+										which not only benifited in the simplification of the connections, but provide less stress concentrations as well</b>.
+									</p>
 
 									<h3>Supporting Vibrational Analysis</h3>
+									<p>Any system with rotating equipments, a study of vibrational analysis is very important. In our case, the pump will be rotating at around 24 Hz. It is important that excitation
+										frequency does not reside in the natural frequency of the system or the peak of the first three modes.<br /><br />
+
+										<span class="image left"><img src="images/capstone/capstone_vibrational_setup.jpg" alt="" /></span>The vibrational study was iterated as much as the bracket structural analysis, since the natural frequency would change due to any physical changes into the system. <b>I was a part of setting up the assembly (pipe manifold + bracket)
+										in SolidWorks to conduct a Frequency study. I correctly applied the present forces, such as the gravity and the thrust applied by the nozzles, and the correct connections, like how the skids would interact
+										witht the floor and walls of the pool</b>.<br /><br />
+
+										Depicted in the image below, the Cumulative Excitation Mass Participation Factor (CEMPF) values along any given direction, prior to the excitation frequency (24 Hz),remain constrained within 25 % range.
+										The excitation frequency also resides far away from the first three modes, where the excitation is more pronounced.										
+									</p>
+									<span class="image fit"><img src="images/capstone/capstone_vibrational_cempf.jpg" alt="" /></span>
+									
+									<h3>Static Analysis</h3>
+									<p><span class="image right"><img src="images/capstone/capstone_weld_connection.jpg" alt="" /></span>The static analysis was a large chunk of the capstone project. I was responsible in conducting simulation on each bracket of the support chassis, making sure all the operating conditions were taken into
+										consideration.<br /><br />
+
+										Similar to the vibrational analysis, it is important to correctly provide the proper connections and present forces in a static analysis.SolidWorks was again used for conducting these analysis.<br />
+										
+										<div class="box alt">
+											<div class="row gtr-50 gtr-uniform">
+												<div class="col-5"><span class="image fit"><img src="images/capstone/capstone_chassi_lagoon.jpg" alt="" /></span></div>
+												<div class="col-6"><span class="image fit"><img src="images/capstone/capstone_loading.jpg" alt="" /></span></div>
+											</div>
+										</div>
+
+										The forces acting on each bracket was brilliantly found by one of my teamates, Duncan, which comprises of the segmentation of the manifold and generating a shear stress and moment diagram to find corresponding reactions
+										at each longitudinal position of the array. With these forces, the static simulation was able to be conducted. <b>Below are the some of the results of the static simulations that I conducted:</b> 
+									</p>
+									<div class="box alt">
+										<div class="row gtr-50 gtr-uniform">
+											<div class="col-4"><span class="image fit"><img src="images/capstone/capstone_static_results1.jpg" alt="" /></span></div>
+											<div class="col-4"><span class="image fit"><img src="images/capstone/capstone_static_results2.jpg" alt="" /></span></div>
+											<div class="col-4"><span class="image fit"><img src="images/capstone/capstone_static_results3.jpg" alt="" /></span></div>
+											<div class="col-4"><span class="image fit"><img src="images/capstone/capstone_static_results4.jpg" alt="" /></span></div>
+											<div class="col-4"><span class="image fit"><img src="images/capstone/capstone_static_results5.jpg" alt="" /></span></div>
+											<div class="col-4"><span class="image fit"><img src="images/capstone/capstone_static_results6.jpg" alt="" /></span></div>
+											<!-- <div class="col-4"><span class="image fit"><img src="images/capstone/capstone_static_results7.jpg" alt="" /></span></div>
+											<div class="col-4"><span class="image fit"><img src="images/capstone/capstone_static_results8.jpg" alt="" /></span></div>
+											<div class="col-4"><span class="image fit"><img src="images/capstone/capstone_static_results9.jpg" alt="" /></span></div> -->
+										</div>
+									</div>
 
 									<h3>Fatigue Analysis</h3>
+									<p>Not unlike vibrational analysis, fatigue is a crucial aspect of a design under continous loading. Even all objects subjet to constant loading, have small fluctuations. Such is the case for the support chassis.
+										Rotating equipments, such as a pump would case quite of a bit of fluctiations on the loading. Hence a 10% variation to the loading (R value = 0.9) was determined. But prior to conducting the fatigue analysis
+										a stress-cycle relationship must be established for the material. <b>I read from a report done by The United States Nuclear Regulatory Commision, who conducted several tests on the 
+										environmental effects on fatigue testing. Conviniently, the material of our choice (316 Stainless-steel) an Austenitic steel, was a part of the study.
+										</b><br /><br /> Based on the study, it was found that it is appropriate to use the stress-cycle relationship developed the tabulated ASME data since an immersion of the metal into the aeration lagoon (25 °𝐶 - 50 °𝐶).<br /><br />
 
-									<h3>Static Analysis</h3>
+										Another consideration was made regarding the acidic nature of the aeration lagoon. A paper by The University of Žilina discussed the fatigue testing for high-cyclical lifetime (1E7 to 1E9 cycles) for marine grade 316 stainless steel affected by corrosion.
+										The test found the yield strength of the steel dropped to 65 MPa. The study was conducted with 12 𝑚𝑚 diameter cylindrical steel samples etched with a
+										mixture of acid and glycerin, with fully reversed (loading ratio 𝑅 = −1) with a frequency of 20 𝑘𝐻𝑧 up
+										to 2 × 109 𝑐𝑦𝑐𝑙𝑒𝑠. <br /> <br />
 
-									<h3>Draughting</h3>
-									<p><span class="image left"><img src="images/capstone/capstone_retainer.jpg" alt="" /></span>Additional to the chassis the team wanted to incorporate a method of retaining the downpipe of the manifold from tipping during extraction.
-									The team investigated many different solutions such as custom brackets or chains but ended up with the design pictured below utilizing rope
-									and wraparound cleats.</p></br />
 
-									<p>One of the first steps taken in analysing the chassis design was an estimation of the loads and reactions experienced by the chassis supports. This was achieved by first examining
-									the forces the manifold itself would be subject to under a determined set of conditions. </p>
-									<hr />
-									<h2>Analysis</h2>
-									<p>One of the first steps taken in analysing the chassis design was an estimation of the loads and reactions experienced by the chassis supports. This was achieved by first examining the forces the manifold itself would be subject
-									 to under a determined set of conditions. </p>
-									<h2>Bracket Simulation</h2>
-									<p> The analysis of the design chassis utilizes the loads obtained from the load analysis. The most critical loading scenarios involve the bracket bearing the individual forces presented by the thrust of the nozzles. SolidWorks Static simulations
-										were utilized to obtain a Von-Mises stress map to indicate the highest stress present in each bracket. Within computational analysis the correct materials, connections between parts, restraints (immovable points to set a boundary condition)
-										and loading needs to be specified. SolidWorks static simulations offer a diverse repertoire of materials complete with property sheets, which conveniently includes AISI 316 grade stainless steel
-										
-									</p>
-									<h3>Simulation Connections and Restraints</h3>
-									<p><span class="image right"><img src="images/capstone/capstone_weld_connection.jpg" alt="" /></span>For the single unit analysis, the component interactions (intersection, adhesion) were limited to a bonding contact, emulating a component or model with constituent bodies that had been welded or adhered together. In order to prevent interference
-										(merging) of the solid materials, a global contact interaction was established. Although a global interaction was set, the part consists of two to three metal components that needs to be welded together. For this an edge weld connection
-										was applied to the relevant corners. This feature would then be used as a reference for the recommended weld diameter at the end of the simulation. The edge-weld connections are located in between contacting edges of any stainless-steel
-										parts.
-									</p>
-									<p><span class="image left"><img src="images/capstone/capstone_chassi_lagoon.jpg" alt="" /></span>Fixtures are required to set a boundary condition in a stress simulation. Fixing the proper geometry on the part analysed is a crucial part of the analysis. The selection of the restraints within the simulation shall model accurately on how the part is restrained in its real-life application.
-										the image on the left shows how the chassis will interact with the lagoon floor and walls while it is in its operating condition. The chassis will not be bolted down unto the lagoon (neither the floor, nor the walls). The sheer weight of the manifold and chassis will provide the downforce 
-										required to anchor the array. With the addition of the thrust generated from the nozzle that will push up the chassis skids against the wall, the manifold will be secured throughout operation.
-									</p>
-									<p><span class="image right"><img src="images/capstone/capstone_chassi_fixtures.jpg" alt="" /></span> The image on the right shows the chosen fixtures that the team believed to be the best way to represent the real-life restraints. A virtual wall will be modeled for the wall and floor of the lagoon, it will only allow compressive action of the part against those walls.
-										An edge at the corner of the skid plate will be a fixed geometry, not able to be displaced. These restraints are not a 100% accurate, although it is the best representation that allows for a single stress unit analysis. A more accurate restraint
-										representation could be modeled, but the manifold system would need to be included in the analysis as well. Although the numerous complicated connections and computational time might not be worth the results.
-									</p>
+										<b>Based on these information, I generated a more conservative stress-cycle relationship that took into consideration effects of the relevant wastewater:</b> 
 
-									<h3>Bracket Loading</h3>
-									<p><span class="image fit"><img src="images/capstone/capstone_loading.jpg" alt="" /></span>The external forces are applied on the parts as a “bearing load”, as it would allow for a sinusoidal distribution of the load from the manifold onto the support. Split lines were made in order to allow selections of the relevant faces that would be affected by the forces,
-										as illustrated.
-									</p>
-									<h3>Results</h3>
-									<h4>Inner Bracket Stress Results</h4>
-									<div class="table-wrapper">
-										<table>
-											<thead>
-												<tr>
-													<th>Resultant Reactions</th>
-													<th>Operational Case</th>
-													<th>Lifting Case</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>Gravity</td>
-													<td>5.232 MPa</td>
-													<td></td>
-												</tr>
-												<tr>
-													<td>Nozzle Thrust</td>
-													<td>5.796 MPa</td>
-													<td></td>
-												</tr>
-												<tr>
-													<td>Gravity + Nozzle Thrust</td>
-													<td>4.744 MPa</td>
-													<td></td>
-												</tr>
-												<tr>
-													<td>Lifting</td>
-													<td></td>
-													<td>4.341 MPa</td>
-												</tr>
-											</tbody>
-										</table>
-									</div>
+										<span class="image fit"><img src="images/capstone/capstone_sn_curve.jpg" alt="" /></span>
 
-									<h4>Outer Bracket Stress Results</h4>
-									<div class="table-wrapper">
-										<table>
-											<thead>
-												<tr>
-													<th>Resultant Reactions</th>
-													<th>Operational Case</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>Gravity</td>
-													<td>1.153 MPa</td>
-												</tr>
-												<tr>
-													<td>Nozzle Thrust</td>
-													<td>1.136 MPa</td>
-												</tr>
-												<tr>
-													<td>Gravity + Nozzle Thrust</td>
-													<td>1.149 MPa</td>
-												</tr>
-											</tbody>
-										</table>
-									</div>
-									
-									<h2>Bracket Bouyancy Loading</h2>
-									<p><span class="image left"><img src="images/capstone/capstone_bouyant_setup.jpg" alt="" /></span>Based on the force calculations in the excel sheet, the manifold experience a net
-										of upwards force due to the buoyancy force present when the manifold assembly is submerged. A static
-										analysis must be conducted to ensure that there is enough weight to prevent the manifold to float up. A
-										similar simulation through SolidWorks was done. Different restraints and bearing load conditions wre used.
-									</p>
-									<p><span class="image right"><img src="images/capstone/capstone_bouyant_fbd.jpg" alt="" /></span> As the buoyancy force is induced by the manifold assembly, the force is
-										distributed amongst the bolt holes' upper surfaces. A virtual wall restraint was also placed on to any
-										surfaces that cannot deform against the lagoon floor and walls. This analysis is done in a chassis assembly, as can be seen on the figure on the right.
-										This was done to include the mass of the beam as it contributes significantly to the gravitational force of the chassis resisting the
-										buoyant force.
-									</p>
-									
-									<h4>Bouyant Forces Stress Results</h4>
-									<div class="table-wrapper">
-										<table>
-											<thead>
-												<tr>
-													<th>Resultant Reactions</th>
-													<th>Inner Support</th>
-													<th>Outer Support</th>
-													<th>Chassis Assembly</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>Bouyancy + Weight</td>
-													<td>0.6 MPa</td>
-													<td>1.6 MPa</td>
-													<td>7.2 MPa</td>
-												</tr>
-											</tbody>
-										</table>
-									</div>
+										<div class="box alt">
+											<div class="row gtr-50 gtr-uniform">
+												<div class="col-6"><span class="image fit"><img src="images/capstone/capstone_fatigue_results1.jpg" alt="" /></span></div>
+												<div class="col-6"><span class="image fit"><img src="images/capstone/capstone_fatigue_results2.jpg" alt="" /></span></div>
+											</div>
+										</div>
 
-									<h2>Vibrational Study</h2>
-									<p><span class="image left"><img src="images/capstone/capstone_vibrational_setup.jpg" alt="" /></span>Vibrational analysis is of utmost importance for this project. Rotating equipment, such as the pump and
-										motor upstream, would induce a frequency excitation to the manifold array. Whenever an induced
-										frequency exists in any mechanical system, an excitation amplitude might find resonance in the system.
-										These amplitudes can cause loading into the systems and are undesirable since it can cause fatigue or
-										even instantaneous failure. This relationship of the excitation amplitudes are a function of the natural
-										frequency and induced frequency of the system, as well as the damping of the system. In a real-life
-										system, with an infinite degree of freedom, there are an infinite number of frequency modes. The
-										excitation frequency of the system, being the frequency of the pump, shall not reside in any of these
-										mode frequencies. But with a higher mode number, the amplitude of the excitation become less and
-										less relevant. Hence the avoidance of the first three modes would be the minimal requirement, with the
-										addition of the avoidance of a dramatical change in excitation participation in any one direction near the
-										excitation frequency.
 									</p>
-									<span class="image fit"><img src="images/capstone/capstone_vibrational_cempf.jpg" alt="" />
-									<p>The presented graph illustrates the Modal Cumulative Effective Mass Participation Factor (CEMPF),
-										showcasing its distribution across three distinct axes in relation to frequency. This insightful data
-										originates from a simulation conducted on an undamped model of the system, capturing its dynamic
-										characteristics without accounting for immersive attenuation effects. This graph communicates the
-										percentage of the total mass being excited in the three-axial directions, growing with higher modes.
-										The upstream motor and pump, both harmoniously operating at approximately 24.11 𝐻𝑧. As
-										depicted, the CEMPF values along any given direction, prior to this frequency threshold,
-										remain constrained within 25 % range. This observation underscores the systems resilience to
-										excessive modal participation in its pre-operational state. Furthermore, the operational frequency
-										distinctly segregated itself from the collection high-magnitudes modes, indicating a favorable isolation
-										from potential resonant interactions. The vibrational study was conducted with no damping
-										consideration from the wastewater, which would only reduce the amplification caused by the excitation
-										frequency.
-									</p>
-									<h2>Fatigue</h2>
-									<p>All objects under any type of loading undergoes fatigue, as the loading it experiences varies throughout
-										its lifetime. Even for “static” objects, small variations of loading would cause an alternating loading
-										condition that would reduce the strength of the object below its yield strength.
-									</p>
-									<p>	
-										In the case of the support chassis, it is of the utmost importance that a fatigue analysis is conducted.
-										Although the load experienced by the chassis would ideally be constant throughout its operation, it
-										would be unlikely. Rotating equipment, such as the pump that is present in the aeration system, are
-										subject to frequency changes. Even if the change of the amplitude is low, the fact that the injector
-										nozzle is expected to have a lifetime of five years, the reduced strength of the part would drop
-										significantly from its yield strength. This is due to a logarithmic relationship between the material
-										strength and its lifetime under time-varying loads, to put it simply, parts that experience alternating
-										stress close to its yield strength has a lower lifetime.
-									</p>
-									<h3>Fatigue Analysis Methodlogy</h3>
+									<!-- <h4>Fatigue Analysis Methodlogy</h4>
 											<ol>
-												<li>The utilization of stress results from the static analysis in both the combined Dry-
-													Weight/Operational condition and the Lifting condition.</li>
+												<li>The utilization of stress results from the static analysis</li>
 												<li>The justification and use of stress-life tabulated values of 316 Stainless-steel.</li>
 												<li>The specification of the desired life cycle of the chassis based on the requirements of the
 													project.</li>
 												<li>The review of the fatigue analysis.</li>
-											</ol>
-									<h3>Stainless Steel Stress-Cycle Relationship</h3>
-									<p>The United-States Nuclear Regulatory Commission had conducted several tests to observe the
-										environmental effects on fatigue testing of Carbon, Low-Alloy Steels, Austenitic Stainless Steels, and
-										Alloy 600. This test study was conducted to compare the results between fatigue tests done on high
-										temperature immersed environment with fatigue tests based on ASME codes for fatigue testing, which
-										did not take into account environmental effects that present in power-plant reactors (emersed in high-
-										temperature oxidized water). The team concluded that this paper would be a good source of reference
-										for the S-N curve to be used in the fatigue simulations. The wastewater condition, having high
-										temperature (50 𝐶) oxygenated water, would receive a more conservative strength-life relationship
-										compared to a S-N curve derived from the elastic modulus from the material.
+											</ol> -->
+									
+									<h3>Draughting</h3>
+									<p>Additional to the technical responsibilites I had in the project, I also conducted a lot of the draughting, espcially when generating neat images to illustrate ideas in the
+										final report. <b>Below are some of the images I generated through AutoCAD:</b>
 									</p>
-									<p>It was found that the temperature range (25 °𝐶 - 450 °𝐶)
-										did not greatly affect the fatigue strength of type 304 and 316 Stainless Steel [5]. Hence the recommended ASME tabulated data for fatigue-life is a
-										safe assumption to use in the fatigue analysis of the chassis, which will be submerged within 40 °𝐶 -
-										50 °𝐶 water.
-									</p>
-									<p>Another consideration that should be made would be the effects of corrosion presented by the chemical
-										make-up of the wastewater. The University of Žilina conducted a laboratory fatigue testing for high-
-										cyclical lifetime (from 107 to 109 cycles) for marine grade stainless steel (304 and 316 grades). The
-										purpose of their study is to generate a new S-N relationship for stainless steel that undergoes low stress
-										for a long lifetime, affected by corrosion. The concern for a material under low stress is crack nucleation,
-										and through this study, it was found that the endurance of 316 stainless steel was reduced to 65 𝑀𝑃𝑎
-										(6.4 𝑘𝑠𝑖). The study was conducted with 12 𝑚𝑚 diameter cylindrical steel samples etched with a
-										mixture of acid and glycerin, with fully reversed (loading ratio 𝑅 = −1) with a frequency of 20 𝑘𝐻𝑧 up
-										to 2 × 109 𝑐𝑦𝑐𝑙𝑒𝑠
-									</p>
-									<span class="image fit"><img src="images/capstone/capstone_sn_curve.jpg" alt="" /></span>
-									<h3>Fatigue Simulation and Results</h3>
-									<p>Fatigue simulations done within SolidWorks utilizes the input event from a static study. The fatigue
-										analysis done takes an input from the static study on each support from its reaction obtained from the
-										thrust forces, this was done as alternating stress in the system is caused by the pump motor.
-										The injector nozzle system is expected to last five years before any maintenance as per specifications.
-										With the frequency of 24.11 𝐻𝑧 from the pump motor, a total of 4 × 109 𝑐𝑦𝑐𝑙𝑒𝑠 are induced unto the
-										supports. The loading ratio was chosen to be 𝑅 = 0.9, since it is a reasonable expected value of
-										frequency variation in the pump motor. Since the S-N values utilized were from fully reversed
-										experimentation, the Soderberg mean stress theory was applied to the study as it is the most
-										conservative correction method.
-									</p>
-									<h4>Results</h4>
-									<div class="table-wrapper">
-										<table>
-											<thead>
-												<tr>
-													<th>Inner Support</th>
-													<th>Outer Support</th>
-													<th>Lifetime</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>4.630 MPa</td>
-													<td>1.961 MPa</td>
-													<td>4E9 cycles</td>
-												</tr>
-											</tbody>
-										</table>
+									<div class="box alt">
+										<div class="row gtr-50 gtr-uniform">
+											<div class="col-4"><span class="image fit"><img src="images/capstone/capstone_loads.jpeg" alt="" /></span></div>
+											<div class="col-4"><span class="image fit"><img src="images/capstone/capstone_retainer.jpg" alt="" /></span></div>
+											<div class="col-4"><span class="image fit"><img src="images/capstone/capstone_chassi_fixtures.jpg" alt="" /></span></div>
+											<div class="col-4"><span class="image fit"><img src="images/capstone/capstone_bouyant_setup.jpg" alt="" /></span></div>
+											<div class="col-4"><span class="image fit"><img src="images/capstone/capstone_bouyant_fbd.jpg" alt="" /></span></div>
+											<div class="col-4"><span class="image fit"><img src="images/capstone/capstone_costing_bracket.jpg" alt="" /></span></div>
+											
+										</div>
 									</div>
-									<hr />
+									
 								</section>
 					</div>
 
