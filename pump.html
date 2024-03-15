@@ -50,7 +50,7 @@
 								</header>
 
 								<!-- Text stuff -->
-									<h2>Background</h2>
+									<h2>Background and Objectives</h2>
 									<p>Perumdam Tirta Mayang Kota Jambi (PDAM), located in Jambi has eight intake gates that obtain water
 									from the Batanghari River. Two of these gates are called the Benteng intake and Scada intake, of which
 									will have pump updates provided by Global Solution Universe Inc. (GSU). These updates would include
@@ -63,8 +63,8 @@
 
 									<p><span class="image left"><img src="images/pump/pump_pipe_system.jpeg" alt="" /></span>These gates pumps water from the intake to the treatment plant at an approximate distance of twelve-
 									hundred metres (1.2 km) with an elevation increase between the reservoir and treatment surface being
-									twenty-two metres (22 m). An inlay of the piping route can be seen on top of the satellite image
-									provided by Google Earth.</p>
+									twenty-two metres (22 m). <b>I inlayed the piping route on top of the satellite image
+									provided by Google Earth to estimate the distance and elevation between the intake and the target. I also considered the drought and flooded condition into account in the study.</b></p>
 									
 									<hr />
 
@@ -158,10 +158,16 @@
 									<p>For completion, the equation for Reynolds number for internal pipe flos is presented below</p>
 									<p class="MathJax_Display">\[Re_d = {{4Q} \over {\pi D \nu}} \]</p>
 
-									<p><span class="image right"><img src="images/pump/pump_pump_curve.jpeg" alt="" /></span>A Python code was used to
-										calculate the headloss values in an array form, this was done for plotting.
+									<p><span class="image right"><img src="images/pump/pump_pump_curve.jpeg" alt="" /></span><b>I wrote a Python code that calculated
+									 the headloss values in an array form for plotting.</b>
 									With the system curve, the pump curves can be superimposed on top of it. This would result in a relationship
-									alike to one illustrated in the "Method" section The system curve was provided by Worthington Pump India Ltd. (WPIL)</p>
+									alike to one illustrated in the "Method" section. The system curve was provided by Worthington Pump India Ltd. (WPIL), and <b>I parallel pump system curves (with 2 pumps and 3 pumps in parallel) based on their given curve.</b></p>
+									<div class="box alt">
+										<div class="row gtr-50 gtr-uniform">
+											<div class="col-6"><span class="image fit"><img src="images/pump/pump_system_curve.jpeg" alt="" /></span></div>
+											<div class="col-6"><span class="image fit"><img src="images/pump/pump_pump_curve2.jpeg" alt="" /></span></div>
+										</div>
+									</div>
 
 									<p>With this information, the pump and system curves were superimposed, and an image was developed
 										using the same Python script. The image can be seen in the figure below.
@@ -169,10 +175,10 @@
 									<span class="image fit"><img src="images/pump/pump_curves_final.jpeg" alt="" /></span>
 
 									<p>Based on the curve, I found that two pumps will operate
-										at: 829 <b>cubic meter per hour</b> , and <b>37 m of head pressure</b>.</p>
+										at:<b> 829 cubic meter per hour</b> , and <b>37 m of head pressure</b>. This value coencide with the desired intake florate from the client.</p>
 
 									<h2>Pump Concept Drawings</h2>
-									<p><b>I was also responsible in generating conceptual drawings for the mounting of the pumps</b></p>
+									<p><b>I was also responsible in generating conceptual drawings for the mounting of the pumps.</b></p>
 									<span class="image fit"><img src="images/pump/pump_cons_1.jpeg" alt="" /></span>
 									<span class="image fit"><img src="images/pump/pump_cons_2.jpeg" alt="" /></span>
 							</section>
