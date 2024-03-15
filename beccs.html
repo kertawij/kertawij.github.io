@@ -53,72 +53,27 @@
 									<p>This project was presented as a requirement for the course MECH 450C: Energy Conversion and Storage, taught by Professor <b>Andrew Rowe</b>.
 										This project was done by myself, Jersey Kertawidjaja, and my teamate <b>Pouria Fyezi Oskouei</b>.
 									</p>
-									<h2>Background and Objectives</h2>
-									<p>One of the biggest challenges in the energy industry since industrialization is how to overcome greenhouse
-										gas (GHG) emissions, especially in the past three decades. In general, there are three ways to alleviate this
-										problem: 1- Utilizing more efficient energy systems 2- Using renewable energy sources 3- Finding a way to
-										lower the ever-growing amount of GHGs already being emitted in the atmosphere over a long time.
-									</p>
-									<p>
-										The latter method will be the focus of this project. Since carbon dioxide (CO2) presents itself as a major
-										GHG causing climate change, it is the substance in particular that is aimed to be reduced. To have a better
-										understanding as to why this is an issue to be addressed, the pre-industrial CO2 amount in the atmosphere
-										was 280ppm (part per million) or less. However, this has risen to more than 419ppm. This increase
-										indicates that the amount of CO2 released in the past two centuries is more than 1T tons (1012 Tons=1015
-										Kg). The increase causing climate change, which is one of the determinant reasons resulting in 1.2 °C
-										increase in average global temperature relative to the late-19th century. It is estimated, with the same
-										slope of GHG emissions, at the end of this century the mole fraction of CO2 in the atmosphere will reach
-										about 800ppm which will result in more than 4.5 °C temperature rise globally.
-									</p>
-									<p>
-										One of the proposed and currently used method to remove carbon from the atmosphere is called Direct
-										Air Capture (DAC), which involves the capture of CO2 directly from ambient air. It uses a combination of
-										chemical processes and engineered systems to selectively extract CO2 molecules from the atmosphere,
-										even when it is present in trace amounts. DAC facilities typically consist of large fans or other air intake
-										mechanisms that draw in air, which is then processed through a series of chemical sorbents or absorbents
-										designed to capture the CO2. Once the CO2 is captured, it can be separated from the sorbent, compressed,
-										and stored for subsequent use or long-term sequestration.
-									</p>
-									<p>
-										The captured CO2 can be used for a variety of purposes, including carbon-neutral fuel production,
-										enhanced oil recovery, or for direct underground storage in geological formations. DAC is considered a
-										promising technology for addressing the challenge of reducing atmospheric CO2 concentrations and
-										mitigating climate change. However, it is still relatively expensive and energy-intensive compared to some
-										other carbon removal methods.
-									</p>	
-									<!-- <p><b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
-									This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
-									This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>.
-									Finally, this is a <a href="#">link</a>.</p> -->
-									
-									<hr />
-
-									<h2>Methods</h2>
-									<p>The purpose of this project is to conduct an exergetic analysis of a DAC system coupled with a power cycle
+									<h2>Objective</h2>
+									<p>The purpose of this project is to conduct an exergetic analysis of a Direct Air Capture (DAC) system coupled with a power cycle
 										(that runs on natural gas) and see how DAC affects the efficiency of the system. This configuration of biogas
 										power cycle and carbon capture is called Bioenergy with carbon capture and storage (BECCS) and is quite
 										an alluring solution to the climate issue.
 									</p>
-									<p>
-										The exergy destruction in the system can be pointed out in the process and so does respective solutions
-										to alleviate them. Moreover, as opposed to the DAC plants being currently run, we aim to find a better
-										input energy source (other than natural gas, which in its own utilization produces CO2) and evaluate their
-										corresponding feasibility.
-									</p>
-									<p>
+									<!-- <p>
 										Throughout the upcoming sections of the report, exergy analysis of a power cycle and CCS will be
 										conducted separately. Total exergy destruction will be calculated from the cumulative amount of each
 										device of each system, done to allocate the locations of large exergy destruction. The exhaust of the power
 										cycle system would then be coupled with the inlet air of the CCS. The affects of change in concentrations
 										can be noticed in CCS fuel requirements, and so does how the CCS affects the efficiency of the power cycle,
 										as it requires more fuel input. 
-									</p>
+									</p> -->
 
-									<h2>Result of Exergetic Analysis</h2>
+									<h2>Exergetic Analysis</h2>
 
-									<p>Exergetic calculations need to be done on the power cycle system as well as the carbon capture
-										component. Exergy of the states present in the components must be defined. Below are the expressions
-										that will be used for defining the exergetic values:
+									<p>Exergetic calculations were required to be done on the power cycle system as well as the carbon capture
+										component. My part specifically, was on the power cycle exergy analysis.<br /> <br />
+										
+										Below are the expressions that will be used for defining the exergetic values:
 									</p>
 									
 
@@ -137,13 +92,16 @@
 
 									<p>In order to compare the system effeciency of a typical natural gas (methane) power cycle, equipt with CCS,
 										with a biogas (methane from biological sources) power cycle system absent CCS, the schematic of the
-										process of power generation is needed.
+										process of power generation is needed. <b>Below is an image of the cycle generated with AutoCAD:</b>
 									</p>
 									
 									
 									<span class="image fit"><img src="images/exergy/exergy_thumbnail.png" alt="" /></span>
 
 									<h3>Component Breakdowns</h3>
+									<p>With the components broken down, a component exergy flux analysis can be conducted.<b> I utilized JupyterLab and CoolProp to store and organize
+										state properties of each components:</b>
+									</p>
 									<div class="row">
 										<div class="col-6 col-12-small">
 
@@ -190,105 +148,23 @@
 									</div>
 									<hr />
 
-									<h2>Carbon Capture System</h2>
 									<h2>Combination of powerplant and ccs</h2>
-									<p>The purpose of this section is to evaluate the coexistence of CCS and PP unit in a system at the same
-										time, in a way that the inflow for CCS is sourced from PP’s exhaust. As mentioned, this flow is almost 210
-										kg/s and CO2’s mole fraction in this flow is 9.5%.
-									</p>
-									<span class="image fit"><img src="images/exergy/exergy_ccs_combined.png" alt="" /></span>
-									<p>As it is seen from Figure 16, we neglect the air flow coming to the system which is actually a very big
-										amount however no exergetic value involved in it. The remarkable point in this combined system is
-										almost half the amount of methane being used in powerplant has to be spent for the CCS, this fact
-										decreases the whole system’s efficiency. To calculate the efficiency and come up the important values of
-										the system the following chart is shown:
-									</p>
-									<div class="table-wrapper">
-										<table>
-											<thead>
-												<tr>
-													<th>Exergy Flow</th>
-													<th>Values</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>Total methane</td>
-													<td>17.07 kg/s</td>
-												</tr>
-												<tr>
-													<td>Turbine work (Powerplant)</td>
-													<td>143.58 MW</td>
-												</tr>
-												<tr>
-													<td>Compressed CO2</td>
-													<td>1 Mt of CO2/year</td>
-												</tr>
-												<tr>
-													<td>Heat from PP</td>
-													<td>490 MW at 323 K</td>
-												</tr>
-												<tr>
-													<td>Heat from the CCS</td>
-													<td>63 MW (calculated in the work loss) at 294 K</td>
-												</tr>
-											</tbody>
-										</table>
-									</div>
-									<p>To amount of exergetic flow for the heat coming out of PP is somewhat remarkable, although the quality
-										of this heat is only 15.5% the amount is considerable. Maybe there could be some way to take advantage
-										of this such as preheating process in CCS as can be seen in.
-									</p>
-									<p>All in all, the total efficiency of the system is calculated according to these values, which comes at
-										18.20% considering the 25.32% powerplant efficiency, this value is somehow not too bad.
+									<p>My teamate, Pouria, conducted the exergy analysis for the carbon capture system similarly.
+										To summarize, the total efficiency of the system (Power plant + Carbon Capture) comes at
+										18.20%. Considering the 25.32% powerplant efficiency, the addition of the carbon capture system, did not greatly
+										affect the system negatively.
 									</p>
 									<h2>Evaluation of sources for biogas</h2>
-									<p>The exergetic analysis conducted in section 3 was done using methane natural gas (CH4), of no source. But
-										when considering natural gas sources and carbon emissions, it is very important to consider the carbon
-										emission from the cradle to grave of the substance/product. In the late 90s the first concept of bioenergy
-										with carbon capture and storage (BECCS) was included in a book published by The United Nations
-										University Press, authored by Robert H. Williams. Williams proposed a biomass source energy generation
-										with carbon capture and sequestration technology. He concluded that the proposed system would induce
-										a net negative carbon emission to the earth’s atmosphere [7]. The quick rundown of BECCS is as illustrated
-										in Figure 17.
-									</p>
-									<span class="image left"><img src="images/exergy/exergy_BECCS.png" alt="" /></span>
-
-									<p>The reason why BECCS is considered net negative in emission is because the source of its fuel is obtained
-										from forest biomass. Forests naturally capture carbon from the atmosphere from due to the
-										photosynthesis process, hence if the CO2 emitted from a biogas powerplant is equal to the amount of CO2
-										absorbed by the trees that had been used up as fuel, the net carbon emission on the earth’s atmosphere
-										would be zero. Hence if an additional CCS is added as part of the power plant, whether it be exhaust
-										capture or DAQ, the net carbon emission emitted unto the earth’s atmosphere would be a net negative.
-									</p>
-									<span class="image right"><img src="images/exergy/exergy_landrequired.png" alt="" /></span>
-
-									<p>The idea of BECCS is very appealing in the emission strand point. But an issue that comes to mind quite
-										quickly would be, “how much more energy does it take to extract biogas as compared to conventional
-										methane from fossil fuel? Is it much more readily available?” Based on Figure 18, presented by a publishing
-										from the Imperial College, BECCS deployment: a reality check, the land area required for BECCS ranges
-										from 100 million hectares to 800 million hectares, depending on the amount of gigatons of CO2 are to be
-										captured per year. If BECCS is to be deployed for the means of intensive carbon capture, about 40% of the
-										world’s cropland would be used for it, causing environmental impacts on biodiversity [8].
-									</p>
-									<h2>Finishing thoughts</h2>
-									<p>Based on the calculations done on the CCS, it was found that a change of CO2 concentration of the inlet
-										changes the amount of work required significantly. The ideal work required for a DAC system that would
-										capture 1 Mt of CO2/year was found to be 20.412 MW. If the carbon capture system was placed near a
-										powerplant, with the aims of capturing the same amount of CO2 from the exhaust (with higher
-										concentration), the ideal work was found 4.21 MW, a significant reduction to a typical direct air capture.
-										On the side of the power plant on the other hand, adding a CCS into the system would reduce its efficiency
-										from 25.32% to 18.20%.
-									</p>
-									<p>The argument for BECCS is made based on the idea of “net negative” carbon emissions that it can provide.
+									<p><b>I was also responsible in reading about the environmental risks that is present when implement BECCS</b></p>
+									<p><span class="image right"><img src="images/exergy/exergy_landrequired.png" alt="" /></span>The argument for BECCS is made based on the idea of “net negative” carbon emissions that it can provide.
 										The idea of producing power while reducing carbon dioxide concentration in the atmosphere is very
-										alluring. Although arguments have been made against BECCS due to the fact that in order for it to be net
-										negative, the source of heat for its power cycle must come from bioenergy, trees in particular since they
-										are they present themselves are naturally occurring carbon capture devices. And as discussed in this
+										alluring. Although I've found several arguments that have been made against BECCS due to the fact that in order for it to be net
+										negative, the source of heat for its power cycle must come from bioenergy. And as discussed in this
 										report, the amount of land that is required to generate energy and capture carbon is quite significant,
 										ranging between 100 million to 800 million hectares. Such an increase of cropland would cause a balance
 										in biodiversity.
 									</p>
+									
 
 
 
