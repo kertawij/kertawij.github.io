@@ -1,0 +1,308 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Spillway Hoist Position Indicator Upgrade</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+		<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js"></script>
+		<style>.MathJax_Display, .MJXc-display, .MathJax_SVG_Display {
+			overflow-x: auto;
+			overflow-y: hidden;
+		}</style>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+				<header id="header">
+					<a href="index.html" class="logo"><img src="images/initials_w.svg" width="100"/></a>
+				</header>
+
+				<!-- Nav -->
+				<nav id="nav">
+					<ul class="links">
+						<li><a href="index.html">Projects</a></li>
+						<li><a href="about_me.html">About Me</a></li>
+						<li class="active"><a href="#">Spillway Hoist Position Indicator Upgrade</a></li>
+					</ul>
+					<ul class="icons">
+						<li><a href="https://www.linkedin.com/in/jersey-kertawidjaja-2786151b6/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+					</ul>
+				</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									<h1>Spillway Hoist Position Indicator Upgrade</h1>
+								</header>
+
+								<!-- Text stuff -->
+									<h2>Background and Objectives</h2>
+									
+									<p>BBA Engineering (BBA) is conducting an upgrade on the position indication system of a pair of radial spillway gate of one their client's hydro generation site.<br /><br />
+										The current method they have on site is via a rotational potentiometer attached to a shaft that rotates with respect to the hoist drum. The issue with is that the
+										drum cannot indicate slack within the hoist rope if there are any, hence not as an accurate method of indication. The issue with the safety limit switch on the gate
+										has the same issue. See the images below.
+									</p>
+									<div class="box alt">
+										<div class="row gtr-50 gtr-uniform">
+											<div class="col-6"><span class="image fit"><img src="images/spillway/site/site 3.jpg" alt="" /></span></div>
+											<div class="col-6"><span class="image fit"><img src="images/spillway/site/site 4.jpg" alt="" /></span></div>
+										</div>
+									</div>	
+									<!-- <p><b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
+									This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
+									This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>.
+									Finally, this is a <a href="#">link</a>.</p> -->
+									
+									<p><b>BBA was hired to device a more accurate and reliable method for gate position indication and safety limit switches.</b></p>
+
+									<p>Based on the client standards, the method of position indication must include sefety limit switches that would indicate:</p>
+									<ol>
+										<li>A high position</li>
+										<li>A slack rope in the hoist</li>
+									</ol>
+
+									<hr />
+
+									<h2>Solution</h2>
+									<p><span class="image left"><img src="images/spillway/position/rheo/ideal mounting location of gate instrumentation.jpg" alt="" /></span>The main philosophy to solving the gate indication with the
+										consideration of slack rope was to measure the incremental movement of the gate directly, from the other side of the
+										slack rope. The trunnion was found to be the ideal solution due to its proximity to a platform in the pier. The access pier would allow access to construct the design solution
+										and maintain it without fall protection, reducing the health and safety risk.<br /><br />
+
+										With this idea in mind, there were four concepts that were generated:
+									</p>
+									<ol>
+										<li>Geared design</li>
+										<li>Draw-wire design</li>
+										<li>Inclinometer design</li>
+										<li>Linkage design</li>
+									</ol>
+
+									<h3>Geared Design</h3>
+									<p><span class="image right"><img src="images/spillway/position/rheo/rheostat design assembly.png" alt="" /></span>The idea behind this design is utilizing the trunnion as an input measurement. A partial gear will
+										be tack-weld into the trunnion as seenm on the right. The trunnion would turn a gear mounted on a rheostat potentiometer.
+										Through the voltage reading from the potentiometer, the rotation of the trunnion can be determined, and through the known rigid geometry of the gate, the elevation of any point of the gate can be known.<br /><br />
+										Relevant equations to convert the rotation of the rheostat through the trunnion rotation, and vice versa:
+									</p>
+									<p class="MathJax_Display">\[S =\theta R = \theta_{trunnion} r_{trunnion} = \theta_{rheostat} r_{rheostat}  \]</p>
+									<p class="MathJax_Display">\[\theta_{rheostat} = {\theta_{trunnion} r_{trunnion} \over r_{rheostat}}  \]</p>
+
+									<h3>Draw-wire Design</h3>
+									<p>By mounting a draw-wire sensor such so that the wire tangentially
+										mounts and wrap around the trunnion, the arc length of the drawn wire can be known. The arc
+										length and the radius of the trunnion would in turn give the amount of rotation the gate
+										experienced. The rotation of the gate would then be used to calculate the elevation change of
+										the relevant point on the gate.
+									</p>
+									<span class="image fit"><img src="images/spillway/position/drawwire/Screenshot 2024-03-26 101756.jpg" alt="" /></span>
+									
+									<h3>Inclinometer Design</h3>
+									<p>An inclinometer measures the angle of a given surface against a zeroed point. Most inclinometers have a range of certain degrees with respect to the horizontal plane (normal to the gravitational force)</p>
+									<div class="box alt">
+										<div class="row gtr-50 gtr-uniform">
+											<div class="col-12"><span class="image fit"><img src="images/spillway/position/inclinometer/inclino.png" alt="" /></span></div>
+											<div class="col-7"><span class="image fit"><img src="images/spillway/position/inclinometer/angle of mounting.png" alt="" /></span></div>
+											<div class="col-4"><span class="image fit"><img src="images/spillway/position/inclinometer/monting configuration.png" alt="" /></span></div>
+										</div>
+									</div>
+
+									<h3>Linkage Design</h3>
+									<p>The final design idea was very similar to the geared design idea, as it utilizes the potentiometer still. The only differing aspect would be how the rotational motion is transferred between the trunnion and the potentiometer.
+										In this design, linkages are used instead of gears. For this solution, SolidWorks was the main tool in designing the position and dimensions of linkages to observe whether the four-bar mechanism is physically attainable
+										The process of determining the dimensions, position, and orientation of the linkages required a lot of trial of error. <br /> <br />
+										<div class="box alt">
+											<div class="row gtr-50 gtr-uniform">
+												<div class="col-4"><span class="image fit"><img src="images/spillway/position/linkage/concept 2.png" alt="" /></span></div>
+												<div class="col-4"><span class="image fit"><img src="images/spillway/position/linkage/concept 1.png" alt="" /></span></div>
+												<div class="col-4"><span class="image fit"><img src="images/spillway/position/linkage/concept 3.png" alt="" /></span></div>
+												<div class="col-4"><span class="image fit"><img src="images/spillway/position/linkage/concept 4.png" alt="" /></span></div>
+												<div class="col-4"><span class="image fit"><img src="images/spillway/position/linkage/concept 5.png" alt="" /></span></div>
+												<div class="col-4"><span class="image fit"><img src="images/spillway/position/linkage/concept 6.png" alt="" /></span></div>
+											</div>
+										</div>	
+										The linkage design utilizing the rotational potentiometer was a favorable design solution to the gate position indication project deliverable due to its proven reliability. The client has a similar instrumentation method for
+										 their spillway gate in their hydroelectric site located on another site. Because of this the linkage actuated potentiometer was the chosen design to be submitted for tender to the client.
+										 <div class="box alt">
+											<div class="row gtr-50 gtr-uniform">
+												<div class="col-4"><span class="image fit"><img src="images/spillway/position/linkage/thumbnail.jpg" alt="" /></span></div>
+												<div class="col-5"><span class="image fit"><img src="images/spillway/position/linkage/low and high elevation.jpg" alt="" /></span></div>
+												<div class="col-3"><span class="image fit"><img src="images/spillway/position/linkage/plan.jpg" alt="" /></span></div>
+												<div class="col-3"><span class="image fit"><img src="images/spillway/position/linkage/section.jpg" alt="" /></span></div>
+												<div class="col-4"><span class="image fit"><img src="images/spillway/position/linkage/detail.jpg" alt="" /></span></div>
+												<div class="col-5"><span class="image fit"><img src="images/spillway/position/linkage/ripos.jpg" alt="" /></span></div>
+											</div>
+										</div>
+									</p>
+									<h3>Safety Limit Solution</h3>
+									<p>The trunnion was again looked at as a very favorable location to mount the limit switches. Allen Brady 802MC limit switches were chosen to be mounted in a radial arc direction of the trunnion.<br /><br />
+
+										The idea behind the solution is to have something that would rigidly attach to the trunnion and follow its arc motion. The rigid part would trigger the switch that would be mounted in a certain location,
+										indicating the location of the trunnion. Knowing the dimensions of the radial gate, the position of the gate was known.<br /><br />
+
+										Slack rope would be solved using a three-way voting system. Meaning the gate position measure from the trunnion rheostat potentiometer would be compared to other gate position indicators, the safety limit switches,
+										and the existing potentiometer that measures the gate position indication in the trunnion shaft.
+									</p>
+
+									<!-- <div class="table-wrapper">
+										<table>
+											<thead>
+												<tr>
+													<th>Item</th>
+													<th>Description</th>
+													<th>Size</th>
+													<th>Quantity</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>1</td>
+													<td>Ripos Rotation Transmitter</td>
+													<td>-</td>
+													<td>4 pcs</td>
+												</tr>
+												<tr>
+													<td>2</td>
+													<td>ASTM A36 Steel Plate Support</td>
+													<td>-</td>
+													<td>4 pcs</td>
+												</tr>
+												<tr>
+													<td>3</td>
+													<td>ASTM A36 Steel Plate Support</td>
+													<td>-</td>
+													<td>4 pcs</td>
+												</tr>
+												<tr>
+													<td>4</td>
+													<td>ASTM A36 Steel Plate Support</td>
+													<td>-</td>
+													<td>4 pcs</td>
+												</tr>
+												<tr>
+													<td>5</td>
+													<td>Ripos Rotation Transmitter</td>
+													<td>-</td>
+													<td>4 pcs</td>
+												</tr>
+												<tr>
+													<td>6</td>
+													<td>ASTM A36 Steel Plate Support</td>
+													<td>-</td>
+													<td>4 pcs</td>
+												</tr>
+												<tr>
+													<td>7</td>
+													<td>ASTM A36 Steel Plate Support</td>
+													<td>-</td>
+													<td>4 pcs</td>
+												</tr>
+												<tr>
+													<td>8</td>
+													<td>ASTM A36 Steel Plate Support</td>
+													<td>-</td>
+													<td>4 pcs</td>
+												</tr>
+												<tr>
+													<td>9</td>
+													<td>Ripos Rotation Transmitter</td>
+													<td>-</td>
+													<td>4 pcs</td>
+												</tr>
+												<tr>
+													<td>10</td>
+													<td>ASTM A36 Steel Plate Support</td>
+													<td>-</td>
+													<td>4 pcs</td>
+												</tr>
+												<tr>
+													<td>11</td>
+													<td>ASTM A36 Steel Plate Support</td>
+													<td>-</td>
+													<td>4 pcs</td>
+												</tr>
+												<tr>
+													<td>12</td>
+													<td>ASTM A36 Steel Plate Support</td>
+													<td>-</td>
+													<td>4 pcs</td>
+												</tr>
+												<tr>
+													<td>13</td>
+													<td>Ripos Rotation Transmitter</td>
+													<td>-</td>
+													<td>4 pcs</td>
+												</tr>
+												<tr>
+													<td>14</td>
+													<td>ASTM A36 Steel Plate Support</td>
+													<td>-</td>
+													<td>4 pcs</td>
+												</tr>
+												<tr>
+													<td>15</td>
+													<td>ASTM A36 Steel Plate Support</td>
+													<td>-</td>
+													<td>4 pcs</td>
+												</tr>
+												<tr>
+													<td>16</td>
+													<td>ASTM A36 Steel Plate Support</td>
+													<td>-</td>
+													<td>4 pcs</td>
+												</tr>
+											</tbody>
+										</table>
+									</div> -->
+									
+								</section>
+					</div>
+
+				<!-- Footer -->
+					<!-- Footer -->
+					<footer id="footer">
+						<section class="split contact">
+							<section>
+								<h3>Email</h3>
+								<p><a href="mailto:kertawij@gmail.com">kertawij@gmail.com</a></p>
+							</section>
+							<section>
+								<h3>LinkedIn</h3>
+								<ul class="icons alt">
+									<li><a href="https://www.linkedin.com/in/jersey-kertawidjaja-2786151b6/" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
+								</ul>
+							</section>
+						</section>
+					</footer>
+				<!-- Copyright -->
+					<div id="copyright">
+						<!-- <ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul> -->
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
